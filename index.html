@@ -3,20 +3,21 @@
     <head>
         <title>Ciudadanos de 4 Patas</title>
         <link rel="stylesheet" href="./css/style.css">
+        
     </head>
     <body>
         <h1>Ciudadanos de 4 Patas</h1>
         <p>Este el formulario que se debe diligenciar para una nueva mascota.</p>
-        Fecha de Registro: <input type="date" name="" id="">
+        Fecha de Registro: <input type="date" id="date-input">
+        <br>
+        Nombre del propietario: <input type="text">
         <br>
         Nombre de la mascota: <input type="text">
-        <br>
-        Nombre del propietaro: <input type="text">
         <br>
         Edad de la Mascota: <input type="number" min="0">
         <br>
         Especie: <select name="" id="">
-            <option value="1">Perro</option>
+            <option value="">Perro</option>
             <option value="">Gato</option>
         </select>
         <br>
@@ -28,18 +29,24 @@
         </select>
         <br>
         <br>
-        <table>
+        <input type="button" value="Guardar">
+        <input type="button" value="Editar">
+        <br>
+        <br>
+        <table >
             <thead>
-                <th>Fecha de Registro</th>
-                <th>Nombre del Propietario</th>
-                <th>Nombre de la Mascota</th>
-                <th>Edad</th>
-                <th>Especie</th>
-                <th>Tamaño</th>
-                <th>Acciones</th>
+                <th class="columm-header columm-header-id">ID</th>
+                <th class="columm-header">Fecha de Registro</th>
+                <th class="columm-header">Nombre del Propietario</th>
+                <th class="columm-header">Nombre de la Mascota</th>
+                <th class="columm-header">Edad</th>
+                <th class="columm-header">Especie</th>
+                <th class="columm-header">Tamaño</th>
+                <th class="columm-header">Acciones</th>
             </thead>
             <tbody>
                 <tr>
+                    <td>1</td>
                     <td>2021-08-24</td>
                     <td>Pepito perez</td>
                     <td>Juan</td>
@@ -53,5 +60,27 @@
                 </tr>
             </tbody>
         </table>
+        <script>
+            var i = true
+            var student = {
+                name: "Pepito Perez",
+                edad: 25,
+                faculty: "Systems",
+                active: true,
+                sayHello: function() {
+                    console.log("Hello, ", this.name)
+                },
+                sayHelloWithArrow: () => console.log("G", this.name)
+            }
+
+            function printMessage(i = false){
+                if (i){
+                    console.log("Hello world!")
+                } else {
+                    console.log("Goodbye!")
+                }
+            }
+            printMessage()
+        </script>
     </body>
 </html>
