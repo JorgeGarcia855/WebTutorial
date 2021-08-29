@@ -3,36 +3,33 @@
     <head>
         <title>Ciudadanos de 4 Patas</title>
         <link rel="stylesheet" href="./css/style.css">
-        
     </head>
     <body>
         <h1>Ciudadanos de 4 Patas</h1>
         <p>Este el formulario que se debe diligenciar para una nueva mascota.</p>
-        Fecha de Registro: <input type="date" id="date-input">
+        Fecha de Registro: <input id="date-input" type="date">
         <br>
-        Nombre del propietario: <input type="text">
+        Nombre del propietario: <input id="owner-input" type="text">
         <br>
-        Nombre de la mascota: <input type="text">
+        Nombre de la mascota: <input id="petname-input" type="text">
         <br>
-        Edad de la Mascota: <input type="number" min="0">
+        Edad de la Mascota: <input  id="petage-input" type="number" min="0">
         <br>
-        Especie: <select name="" id="">
-            <option value="">Perro</option>
-            <option value="">Gato</option>
+        Especie: <select id="petspecies-input">
+            <option>Perro</option>
+            <option>Gato</option>
         </select>
         <br>
-        Tamaño: <select name="" id="">
-            <option value="">Minialtura</option>
-            <option value="">Pequeño</option>
-            <option value="">Mediano</option>
-            <option value="">Grande</option>
+        Tamaño: <select id="petsize-input">
+            <option>Minialtura</option>
+            <option>Pequeño</option>
+            <option>Mediano</option>
+            <option>Grande</option>
         </select>
-        <br>
-        <br>
-        <input type="button" value="Guardar">
-        <input type="button" value="Editar">
-        <br>
-        <br>
+        <br><br>
+        <input id="petsave-button" type="button" value="Guardar">
+        <input id="petclean-button" type="button" value="Limpiar">
+        <br><br>
         <table >
             <thead>
                 <th class="columm-header columm-header-id">ID</th>
@@ -44,8 +41,8 @@
                 <th class="columm-header">Tamaño</th>
                 <th class="columm-header">Acciones</th>
             </thead>
-            <tbody>
-                <tr>
+            <tbody id="body-table">
+                <!--<tr>
                     <td>1</td>
                     <td>2021-08-24</td>
                     <td>Pepito perez</td>
@@ -54,33 +51,12 @@
                     <td>Perro</td>
                     <td>Grande</td>
                     <td>
-                        <input type="button" value="Editar" name="" id="">
+                        
                         <input type="button" value="Eliminar" name="" id="">
                     </td>
-                </tr>
+                </tr>-->
             </tbody>
         </table>
-        <script>
-            var i = true
-            var student = {
-                name: "Pepito Perez",
-                edad: 25,
-                faculty: "Systems",
-                active: true,
-                sayHello: function() {
-                    console.log("Hello, ", this.name)
-                },
-                sayHelloWithArrow: () => console.log("G", this.name)
-            }
-
-            function printMessage(i = false){
-                if (i){
-                    console.log("Hello world!")
-                } else {
-                    console.log("Goodbye!")
-                }
-            }
-            printMessage()
-        </script>
+        <script src="./js/main.js"></script>
     </body>
 </html>
