@@ -54,6 +54,14 @@ fetch("https://dog.ceo/api/breeds/list/all")
             })
         })
 
+fetch("https://api.thecatapi.com/v1/breeds")
+        .then(response => response.json())
+        .then(data => {
+           let breeds = data.map(breed => breed.id)
+           console.log(breeds)
+        })
+        
+
 document.getElementById("show-image").onclick = function () {
     let breed = document.getElementById("petbreed-input").value
 
